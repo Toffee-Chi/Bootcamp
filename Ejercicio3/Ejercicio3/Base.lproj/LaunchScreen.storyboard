@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="23504" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="01J-lp-oVM">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="23506"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="EHf-IW-A2E">
+            <objects>
+                <viewController id="01J-lp-oVM" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Ze5-6b-2t3">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="208" verticalHuggingPriority="251" image="sun.and.horizon.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="hGR-Y7-wag">
+                                <rect key="frame" x="71" y="304.66666666666669" width="251" height="100"/>
+                                <color key="backgroundColor" red="1" green="0.88978301382635783" blue="0.56467788424131515" alpha="0.14051870748299319" colorSpace="custom" customColorSpace="displayP3"/>
+                                <color key="tintColor" red="0.94223179769999998" green="0.60411034959999999" blue="0.21492581650000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="104.66666666666669" id="T8G-gm-P9V"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Wait a second..." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TDg-km-yqh">
+                                <rect key="frame" x="135" y="434" width="121.99999999999997" height="21"/>
+                                <color key="backgroundColor" red="1" green="0.88978301380000002" blue="0.56467788419999998" alpha="0.14793261054421769" colorSpace="custom" customColorSpace="displayP3"/>
+                                <color key="tintColor" red="0.97918009019999996" green="0.62779968590000002" blue="0.2233538296" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="hGR-Y7-wag" firstAttribute="top" secondItem="TDg-km-yqh" secondAttribute="bottom" constant="-152" id="8qE-CZ-EwO"/>
+                            <constraint firstItem="hGR-Y7-wag" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="GPl-uQ-OEA"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="hGR-Y7-wag" secondAttribute="bottom" constant="410.33333333333337" id="jUI-l7-KVF"/>
+                            <constraint firstItem="hGR-Y7-wag" firstAttribute="centerX" secondItem="TDg-km-yqh" secondAttribute="centerX" id="lv9-Pd-uB8"/>
+                            <constraint firstItem="hGR-Y7-wag" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="71" id="xdB-5r-LGH"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="iYj-Kq-Ea1" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="53" y="375"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="sun.and.horizon.fill" catalog="system" width="128" height="79"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

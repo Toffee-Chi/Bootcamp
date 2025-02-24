@@ -1,0 +1,26 @@
+{
+  "colors" : [
+    {
+      "color" : {
+        "platform" : "ios",
+        "reference" : "labelColor"
+      },
+      "idiom" : "iphone"
+    },
+    {
+      "color" : {
+        "platform" : "ios",
+        "reference" : "systemOrangeColor"
+      },
+      "idiom" : "iphone",
+      "locale" : "en"
+    }
+  ],
+  "info" : {
+    "author" : "xcode",
+    "version" : 1
+  },
+  "properties" : {
+    "localizable" : true
+  }
+}
