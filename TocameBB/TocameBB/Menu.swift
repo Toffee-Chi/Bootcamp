@@ -45,7 +45,23 @@ class Menu: UIViewController {
     }
     
     @IBAction func saveButtonTapped(_ sender: UIButton) {
-        goToHome()
+        // Recuperar el array actual o crear uno nuevo si no existe
+        var nombreArray = UserDefaults.standard.stringArray(forKey: "NombreArray") ?? []
+        
+        // Agregar el nuevo nombre
+        if let nuevoNombre = nameText.text, !nuevoNombre.isEmpty {
+            // Limitar a los últimos 5 nombres por ejemplo
+            if nombreArray.count >= 5 {
+                nombreArray.removeFirst()
+            }
+            nombreArray.append(nuevoNombre)
+        }
+        
+        // Guardar el array actualizado
+        UserDefaults.standard.set(nombreArray, forKey: "NombreArray")
+        
+        print("Nombres guardados: \(nombreArray)")
+
     }
     
     @IBAction func More(_ sender: UIButton) {
@@ -54,15 +70,5 @@ class Menu: UIViewController {
             // Usamos UIApplication.shared para abrir el enlace
             UIApplication.shared.open(url, options: [:], completionHandler: nil)
         }
-    }
-
- 
-    
-    //funcion y diccionario para recibir el user
-    func goToHome(){
-        let vc = (self.storyboard?.instantiateViewController(withIdentifier:"InicioID") as? Inicio)!
-        vc.nombre = nameText.text ?? "Player" //enviamos el nombre a la siguiente pantalla
-        show(vc, sender: nil)
-        print(vc.nombre!)
     }
 }

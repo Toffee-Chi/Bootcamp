@@ -8,30 +8,29 @@ class Inicio: UIViewController {
     @IBOutlet weak var FoolGround: UIView!
     @IBOutlet weak var TimeLabel: UILabel!
     @IBOutlet weak var ScoreLabel: UILabel!
-    var nombre: String!
-
+    
+    
     var count = 0  // Variable para almacenar el contador del juego
     var timer: Timer? // inicializando el dato
-    var seconds = 7  // Tiempo máximo en segundos
+    var seconds = 30  // Tiempo máximo en segundos
     var isGameActive = false  // Flag para controlar si el juego está activo o no
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         // Llamar al timer para que se mueva el botón solo cuando el juego esté activo
         Timer.scheduledTimer(withTimeInterval: 1.0, repeats: true) { _ in
             if self.isGameActive {
                 self.moveButtonRandomly()
             }
         }
-
+        
         TimeLabel.text = "\(seconds)"  // Inicializa el label con 30
         ScoreLabel.text = "\(count)"  // Inicializa el label en 0
     }
-
-
     
-
+    
+    
+    
     
     @IBAction func moveButtonTapped(_ sender: UIButton) {
         moveButtonRandomly()
@@ -65,7 +64,7 @@ class Inicio: UIViewController {
         startTimer()
         isGameActive = true
     }
-
+    
     // Función para iniciar el temporizador
     func startTimer() {
         timer?.invalidate()
@@ -82,14 +81,14 @@ class Inicio: UIViewController {
             TimeLabel.text = "\(seconds)"
         } else {
             timer?.invalidate()
-           // saveScore()
+            // saveScore()
             showAlert()
             count = 0
             ScoreLabel.text = "\(count)"
             isGameActive = false
         }
     }
-
+    
     // Función para mostrar la alerta
     func showAlert() {
         let alert = UIAlertController(title: "¡Tiempo terminado!", message: "Tu puntaje es: \(count)", preferredStyle: .alert)
@@ -97,21 +96,39 @@ class Inicio: UIViewController {
         present(alert, animated: true, completion: nil)
         saveScore()
     }
-//almacena los datos del usuario, y envia al record el historial de los mismos
-    func saveScore(){
-       /* if let score = ScoreLabel.text {
-            UserDefaults.standard.set(score, forKey: "Score")
-        }*/
-        var Usuarios: [String: String] = [:] // Crear un diccionario vacío
-        Usuarios["Nombre"] = nombre // Guardar un String en el diccionario
-        
-        var Score: [String: String] = [:] // Crear un diccionario vacío
-        Score["Score"] = ScoreLabel.text ?? "" // Guardar un String en el diccionario
- 
-        let todo = [Usuarios, Score]
-        UserDefaults.standard.set(todo, forKey: "todo")
+    //almacena los datos del usuario, y envia al record el historial de los mismos
+    func saveScore() {
+        // Obtener el nombre del usuario actual desde el array de nombres
+        if let nombreUsuarioArray = UserDefaults.standard.stringArray(forKey: "NombreArray") {
+            // Tomar el último nombre del array
+            let nombreUsuario = nombreUsuarioArray.last ?? "Desconocido"
+            
+            // Obtener la puntuación actual
+            let puntuacion = ScoreLabel.text ?? "0"
+            
+            // Crear un diccionario para este registro
+            let nuevoRegistro: [String: String] = [
+                "Nombre": nombreUsuario,
+                "Score": puntuacion,
+                "Fecha": "\(Date())" // Opcional: añadir fecha para más contexto
+            ]
+            
+            // Recuperar registros anteriores o crear lista vacía si no existen
+            var registrosAnteriores = UserDefaults.standard.array(forKey: "todo") as? [[String: String]] ?? []
+            
+            // Añadir el nuevo registro
+            registrosAnteriores.append(nuevoRegistro)
+            
+            // Opcional: Limitar el número de registros (por ejemplo, a los últimos 10)
+            if registrosAnteriores.count > 10 {
+                registrosAnteriores.removeFirst()
+            }
+            
+            // Guardar la lista actualizada
+            UserDefaults.standard.set(registrosAnteriores, forKey: "todo")
+            
+            print("Datos guardados: \(registrosAnteriores)")
+        }
         
     }
-    //manda el default donde tiene todos los datos
-
 }
