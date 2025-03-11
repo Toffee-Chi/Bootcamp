@@ -21,6 +21,7 @@
  */
 import Foundation
 import Alamofire
+import Kingfisher
 // Define APIError
 struct APIError {
     let message: String
