@@ -1,6 +1,7 @@
 import UIKit
+import Alamofire
 
-//Modelo Pokémon con habilidades, peso y tipos
+// Estructura para el Pokémon
 struct Pokemon: Decodable {
     let name: String
     let id: Int
@@ -8,54 +9,81 @@ struct Pokemon: Decodable {
     let abilities: [PokemonAbility]
     let types: [PokemonType]
     let sprites: Sprites
+    let species: PokemonSpeciesReference
 }
-//almacena habilidad
+
+// Estructura para la habilidad de Pokémon
 struct PokemonAbility: Decodable {
     let ability: AbilityInfo
 }
-//la informacion de la habilidad
+
+// Información de la habilidad
 struct AbilityInfo: Decodable {
     let name: String
 }
-//representa el tipo de pokemon "agua,fuego,veneno, etc"
+
+// Estructura para los tipos de Pokémon
 struct PokemonType: Decodable {
     let type: TypeInfo
 }
-//se ve el tipo de dato y el dato del pokemon
+
+// Información de los tipos de Pokémon
 struct TypeInfo: Decodable {
     let name: String
 }
-//para la imagen retro
+
+// Estructura para las imágenes retro de los Pokémon
 struct Sprites: Decodable {
-    let frontDefault: String? // Este es el sprite por defecto
+    let frontDefault: String?
     enum CodingKeys: String, CodingKey {
-        case frontDefault = "front_default" // Mapeo al campo "front_default" de la API
+        case frontDefault = "front_default"
     }
-    
 }
-//arreglo de tipo pokemonresult, contiene el nombre de los pokemones
+
+// Estructura para la lista de Pokémon
 struct PokemonList: Decodable {
     let results: [PokemonResult]
 }
-//este contiene el nombre del pokemon
+
+// Estructura para un Pokémon específico en la lista
 struct PokemonResult: Decodable {
     let name: String
 }
 
-// Modelo para obtener la lista de tipos de Pokémon desde la API
+// Estructura para obtener los tipos de Pokémon
 struct PokemonTypeList: Decodable {
     let results: [TypeInfo]
 }
 
-// Modelo para obtener la lista de Pokémon por tipo
+// Estructura para obtener los Pokémon por tipo
 struct PokemonTypeDetail: Decodable {
     let pokemon: [PokemonEntry]
 }
-// es donde esta la informacion basica del pokemon, es como una entrada a una lista mas grande
+
+// Estructura para los Pokémon en la lista por tipo
 struct PokemonEntry: Decodable {
     let pokemon: PokemonBasicInfo
 }
-//esto solo contiene una propiedad name, por ej devuelve pikachu
+
+// Información básica del Pokémon
 struct PokemonBasicInfo: Decodable {
+    let name: String
+}
+
+// Estructura para obtener la biografía (descripción) del Pokémon
+struct PokemonSpeciesReference: Decodable {
+    let url: String
+}
+
+struct PokemonSpecies: Decodable {
+    let flavorTextEntries: [FlavorTextEntry]
+}
+
+struct FlavorTextEntry: Decodable {
+    let flavorText: String
+    let language: Language
+}
+
+struct Language: Decodable {
     let name: String
 }

@@ -2,15 +2,18 @@ import UIKit
 import Alamofire
 import Kingfisher
 
-class SearchView: UIViewController {
+class SearchView: UIViewController{
     @IBOutlet weak var textFieldTipos: UITextField!
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var searchPokemon: UISearchBar!
-    //variables para el picker
+    
+    // Variables para el picker
     let pickerView = UIPickerView()
     let opciones = ["Nombre", "Tipo"]
     var criterioSeleccionado = "Nombre"
     var tiposPokemon: [String] = []
+    
+    var tipoSeleccionado: String? = nil  // Almacena el tipo seleccionado
     
     var pokemones: [(name: String, imageUrl: String)] = []
     var filteredPokemones: [(name: String, imageUrl: String)] = []
@@ -39,7 +42,7 @@ class SearchView: UIViewController {
     
     
     func fetchAllPokemon() {
-        let url = "https://pokeapi.co/api/v2/pokemon?limit=100"
+        let url = "https://pokeapi.co/api/v2/pokemon?limit=802"
         
         AF.request(url).responseDecodable(of: PokemonList.self) { response in
             switch response.result {
@@ -80,6 +83,7 @@ class SearchView: UIViewController {
             }
         }
     }
+    
     func filterByType(tipo: String) {
         let url = "https://pokeapi.co/api/v2/type/\(tipo)"
         
@@ -88,6 +92,7 @@ class SearchView: UIViewController {
             case .success(let typeData):
                 let pokemonNames = typeData.pokemon.map { $0.pokemon.name }
                 self.filteredPokemones = self.pokemones.filter { pokemonNames.contains($0.name) }
+                self.applySearchFilter()  // Aplica el filtro de búsqueda después de filtrar por tipo
                 self.tableView.reloadData()
             case .failure(let error):
                 print("Error al filtrar por tipo: \(error)")
@@ -95,6 +100,12 @@ class SearchView: UIViewController {
         }
     }
     
+    // Aplica el filtro de búsqueda de nombre (SearchBar)
+    func applySearchFilter() {
+        if let searchText = searchPokemon.text, !searchText.isEmpty {
+            filteredPokemones = filteredPokemones.filter { $0.name.lowercased().contains(searchText.lowercased()) }
+        }
+    }
     
     func fetchPokemonImage(for name: String, completion: @escaping (String) -> Void) {
         let url = "https://pokeapi.co/api/v2/pokemon/\(name)"
@@ -113,16 +124,14 @@ class SearchView: UIViewController {
 
 extension SearchView: UISearchBarDelegate {
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
-        if searchText.isEmpty {
-            filteredPokemones = pokemones
-        } else {
-            filteredPokemones = pokemones.filter { $0.name.lowercased().contains(searchText.lowercased()) }
-        }
+        applySearchFilter()  // Aplica el filtro de búsqueda por nombre
+        
+        // Recarga la tabla
         tableView.reloadData()
     }
 }
 
-//extension del picker, aun no funciona para autocompletar con los tipos ya que no agregue ninguna funcion al textfieldtipos
+// Extensión del picker, para seleccionar tipos
 extension SearchView: UIPickerViewDelegate, UIPickerViewDataSource {
     func numberOfComponents(in pickerView: UIPickerView) -> Int { return 1 }
     
@@ -139,14 +148,15 @@ extension SearchView: UIPickerViewDelegate, UIPickerViewDataSource {
         textFieldTipos.text = tipoSeleccionado
         textFieldTipos.resignFirstResponder()
         
-        filterByType(tipo: tipoSeleccionado.lowercased()) // Filtra los Pokémon por tipo
+        self.tipoSeleccionado = tipoSeleccionado.lowercased()  // Guarda el tipo seleccionado
+        filterByType(tipo: tipoSeleccionado.lowercased()) // Filtra los Pokémon por el tipo
     }
 }
 
 
-//se declara los protocolos que se van a usar en el tableview, asi como se usara la celda personalizada.
+// Extensión para el TableView, maneja la vista de celdas
+// Extensión para el TableView, maneja la vista de celdas
 extension SearchView: UITableViewDataSource, UITableViewDelegate {
-    //muestra cuantas filas tendra la tabla
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return filteredPokemones.count
     }
@@ -164,38 +174,57 @@ extension SearchView: UITableViewDataSource, UITableViewDelegate {
         
         return cell
     }
+    
+    
+    
+    // MÉTODO PARA DETECTAR LA SELECCIÓN Y NAVEGAR A BiographyView
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let selectedPokemon = filteredPokemones[indexPath.row]
+        
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        if let biographyVC = storyboard.instantiateViewController(withIdentifier: "BiographyView") as? BiographyView {
+            biographyVC.pokemonName = selectedPokemon.name
+            biographyVC.pokemonImageUrl = selectedPokemon.imageUrl
+            // Presentar el view controller en lugar de hacer push
+            biographyVC.modalPresentationStyle = .fullScreen
+            present(biographyVC, animated: true, completion: nil)
+        } else {
+            print("Error: No se pudo instanciar BiographyView desde el Storyboard")
+        }
+    }
+    
+    
 }
 
-// Celda personalizada, para que aparezca la imagen del pokemon y su nombre
-//es mas que nada estetica.
+
+// Celda personalizada para mostrar la imagen y el nombre del Pokémon
 class PokemonCell: UITableViewCell {
- let pokemonImageView = UIImageView()
- let nameLabel = UILabel()
- 
- override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
- super.init(style: style, reuseIdentifier: reuseIdentifier)
- 
- pokemonImageView.contentMode = .scaleAspectFit
- pokemonImageView.translatesAutoresizingMaskIntoConstraints = false
- addSubview(pokemonImageView)
- 
- nameLabel.font = UIFont.systemFont(ofSize: 16, weight: .medium)
- nameLabel.translatesAutoresizingMaskIntoConstraints = false
- addSubview(nameLabel)
- 
- NSLayoutConstraint.activate([
- pokemonImageView.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 10),
- pokemonImageView.centerYAnchor.constraint(equalTo: centerYAnchor),
- pokemonImageView.widthAnchor.constraint(equalToConstant: 50),
- pokemonImageView.heightAnchor.constraint(equalToConstant: 50),
- 
- nameLabel.leadingAnchor.constraint(equalTo: pokemonImageView.trailingAnchor, constant: 10),
- nameLabel.centerYAnchor.constraint(equalTo: centerYAnchor)
- ])
- }
- 
- required init?(coder: NSCoder) {
- fatalError("init(coder:) has not been implemented")
- }
- }
- 
+    let pokemonImageView = UIImageView()
+    let nameLabel = UILabel()
+    
+    override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
+        super.init(style: style, reuseIdentifier: reuseIdentifier)
+        
+        pokemonImageView.contentMode = .scaleAspectFit
+        pokemonImageView.translatesAutoresizingMaskIntoConstraints = false
+        addSubview(pokemonImageView)
+        
+        nameLabel.font = UIFont.systemFont(ofSize: 16, weight: .medium)
+        nameLabel.translatesAutoresizingMaskIntoConstraints = false
+        addSubview(nameLabel)
+        
+        NSLayoutConstraint.activate([
+            pokemonImageView.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 10),
+            pokemonImageView.centerYAnchor.constraint(equalTo: centerYAnchor),
+            pokemonImageView.widthAnchor.constraint(equalToConstant: 50),
+            pokemonImageView.heightAnchor.constraint(equalToConstant: 50),
+            
+            nameLabel.leadingAnchor.constraint(equalTo: pokemonImageView.trailingAnchor, constant: 10),
+            nameLabel.centerYAnchor.constraint(equalTo: centerYAnchor)
+        ])
+    }
+    
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+}

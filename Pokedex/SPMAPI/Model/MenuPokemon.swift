@@ -71,11 +71,6 @@ class MenuPokemon: UIViewController {
                         self.tipo.text = "Tipo: No disponible"
                     }
                     
-                    // Cargar imagen con Kingfisher en HD
-                    //                    if let imageUrl = URL(string: "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/\(pokemon.id).png") {
-                    //                        self.image1.kf.setImage(with: imageUrl)
-                    //                    }
-                    //image default de pokeapi
                     if let imageUrl = URL(string: pokemon.sprites.frontDefault ?? "") {
                         self.image1.kf.setImage(with: imageUrl) // Usando Kingfisher para cargar la imagen
                     }

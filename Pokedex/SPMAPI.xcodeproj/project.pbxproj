@@ -12,16 +12,16 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		2A95BE5D2D7B2BBE0034E884 /* SPMAPI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SPMAPI.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		2A95BE5D2D7B2BBE0034E884 /* Pokedex.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Pokedex.app; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
-		2A95BE6F2D7B2BC00034E884 /* Exceptions for "SPMAPI" folder in "SPMAPI" target */ = {
+		2A95BE6F2D7B2BC00034E884 /* Exceptions for "SPMAPI" folder in "Pokedex" target */ = {
 			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
 			membershipExceptions = (
 				Info.plist,
 			);
-			target = 2A95BE5C2D7B2BBE0034E884 /* SPMAPI */;
+			target = 2A95BE5C2D7B2BBE0034E884 /* Pokedex */;
 		};
 /* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
 
@@ -29,7 +29,7 @@
 		2A95BE5F2D7B2BBE0034E884 /* SPMAPI */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
 			exceptions = (
-				2A95BE6F2D7B2BC00034E884 /* Exceptions for "SPMAPI" folder in "SPMAPI" target */,
+				2A95BE6F2D7B2BC00034E884 /* Exceptions for "SPMAPI" folder in "Pokedex" target */,
 			);
 			path = SPMAPI;
 			sourceTree = "<group>";
@@ -60,7 +60,7 @@
 		2A95BE5E2D7B2BBE0034E884 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				2A95BE5D2D7B2BBE0034E884 /* SPMAPI.app */,
+				2A95BE5D2D7B2BBE0034E884 /* Pokedex.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -68,9 +68,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		2A95BE5C2D7B2BBE0034E884 /* SPMAPI */ = {
+		2A95BE5C2D7B2BBE0034E884 /* Pokedex */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 2A95BE702D7B2BC00034E884 /* Build configuration list for PBXNativeTarget "SPMAPI" */;
+			buildConfigurationList = 2A95BE702D7B2BC00034E884 /* Build configuration list for PBXNativeTarget "Pokedex" */;
 			buildPhases = (
 				2A95BE592D7B2BBE0034E884 /* Sources */,
 				2A95BE5A2D7B2BBE0034E884 /* Frameworks */,
@@ -83,13 +83,13 @@
 			fileSystemSynchronizedGroups = (
 				2A95BE5F2D7B2BBE0034E884 /* SPMAPI */,
 			);
-			name = SPMAPI;
+			name = Pokedex;
 			packageProductDependencies = (
 				2A95BE762D7B2BDD0034E884 /* Alamofire */,
 				2A95BE7C2D7B368B0034E884 /* Kingfisher */,
 			);
 			productName = SPMAPI;
-			productReference = 2A95BE5D2D7B2BBE0034E884 /* SPMAPI.app */;
+			productReference = 2A95BE5D2D7B2BBE0034E884 /* Pokedex.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -125,7 +125,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				2A95BE5C2D7B2BBE0034E884 /* SPMAPI */,
+				2A95BE5C2D7B2BBE0034E884 /* Pokedex */,
 			);
 		};
 /* End PBXProject section */
@@ -163,6 +163,7 @@
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UIStatusBarStyle = "";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -190,6 +191,7 @@
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UIStatusBarStyle = "";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -336,7 +338,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		2A95BE702D7B2BC00034E884 /* Build configuration list for PBXNativeTarget "SPMAPI" */ = {
+		2A95BE702D7B2BC00034E884 /* Build configuration list for PBXNativeTarget "Pokedex" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				2A95BE712D7B2BC00034E884 /* Debug */,
