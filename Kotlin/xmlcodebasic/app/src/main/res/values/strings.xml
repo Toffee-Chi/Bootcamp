@@ -1,0 +1,41 @@
+<resources>
+    <!--    IMC APP-->
+
+    <string name="app_name">xmlcodebasic</string>
+    <string name="male">Hombre</string>
+    <string name="female">Mujer</string>
+    <string name="height">Altura</string>
+    <string name="Weight">Peso</string>
+    <string name="Calculate">Calcular</string>
+    <string name="result">Tu resultado</string>
+    <string name="recalculate">Re-Calcular</string>
+
+    <string name="Error">Error</string>
+
+    <string name="tittle_bajo_peso">Bajo Peso</string>
+    <string name="description_bajo_peso">Estas por debajo de lo optimo para tu peso y altura.</string>
+
+    <string name="tittle_normal_peso">Peso Normal</string>
+    <string name="description_normal_peso">Estas en el estado optimo  para tu peso y altura.</string>
+
+    <string name="tittle_sobrepeso_peso">Sobrepeso</string>
+    <string name="description_sobrepeso_peso">Estas por encima de lo optimo para tu peso y altura.</string>
+
+    <string name="tittle_obesidad_peso">Bajo Peso</string>
+    <string name="description_obesidad_peso">Estas MUY por encima de lo optimo para tu peso y altura.</string>
+
+    <!--    TODOAPP -->
+
+    <string name="welcomeTodo">Bienvenido, Auteri</string>
+    <string name="todo_categories">Categorias</string>
+    <string name="todo_task">Tareas</string>
+    <string name="todo_dialog_add_task">Añade una tarea:</string>
+    <string name="todo_dialog_category_bussines">Negocio</string>
+    <string name="todo_dialog_category_personal">Personal</string>
+    <string name="todo_dialog_category_other">Otros</string>
+    <string name="todo_dialog_add_task_buttom">Crear Tarea</string>
+
+
+
+
+</resources>

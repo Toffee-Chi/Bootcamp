@@ -1,0 +1,19 @@
+<resources>
+    <string name="app_name">TocameBB</string>
+    <string name="btnMenu">Plush</string>
+    <string name="title">FRUIT KAWAII</string>
+    <string name="btnPlay">Play :D</string>
+    <string name="score">Score: 0</string>
+    <string name="time">Time: 30</string>
+    <string name="dialog_text">Time is Over!</string>
+    <string name="top">Top Score:</string>
+    <string name="you">Your Score:</string>
+    <string name="btnDialog">Back</string>
+
+
+
+
+
+
+
+</resources>
