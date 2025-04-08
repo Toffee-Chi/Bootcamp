@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/cvRandom"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".RandomBtnActivity">
+
+    <!-- Contenedor principal -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/background_menu_tocamebb"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <!-- Toolbar en la parte superior -->
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="@color/btnMenuTint"
+            android:elevation="4dp"
+            app:popupTheme="@style/ThemeOverlay.AppCompat.Light">
+
+            <!-- TextView alineado a la derecha -->
+            <TextView
+                android:id="@+id/tvToolbarText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/score"
+                android:textColor="@android:color/white"
+                android:textSize="18sp"
+                android:layout_gravity="end"
+                android:paddingEnd="16dp"/>
+
+            <TextView
+                android:id="@+id/tvToolbarTime"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/time"
+                android:textColor="@android:color/white"
+                android:textSize="18sp"
+                android:layout_gravity="center"
+                android:paddingEnd="16dp"/>
+
+        </androidx.appcompat.widget.Toolbar>
+
+        <!-- Espaciador para centrar el contenido -->
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1" />
+
+        <ImageButton
+            android:id="@+id/btnfruitcool"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:background="@android:color/transparent"
+            android:scaleType="fitCenter"
+            android:src="@drawable/fruitcool" />
+
+        <ImageButton
+            android:id="@+id/btnfake1"
+            style="@style/btnfake"
+            android:scaleType="fitCenter"
+            android:src="@drawable/falseorange" />
+
+        <ImageButton
+            android:id="@+id/btnfake2"
+            style="@style/btnfake"
+            android:scaleType="fitCenter"
+            android:src="@drawable/falseorange" />
+
+        <ImageButton
+            android:id="@+id/btnfake3"
+            style="@style/btnfake"
+            android:scaleType="fitCenter"
+            android:src="@drawable/falseorange" />
+
+        <!-- Otro espaciador -->
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1" />
+
+        <Button
+            android:id="@+id/btnPlay"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/btnMenuTint"
+            android:text="@string/btnPlay">
+        </Button>
+
+    </LinearLayout>
+
+</androidx.cardview.widget.CardView>
