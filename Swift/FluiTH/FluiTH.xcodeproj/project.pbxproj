@@ -1,0 +1,406 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 77;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		2A4ED08B2DA459D40003D7A1 /* AprovedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A4ED08A2DA459D40003D7A1 /* AprovedView.swift */; };
+		2A4ED08D2DA45A030003D7A1 /* PendientView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A4ED08C2DA45A030003D7A1 /* PendientView.swift */; };
+		2AF6845F2D9D81BE0013B223 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2AF684512D9D81BE0013B223 /* Assets.xcassets */; };
+		2AF684612D9D81BE0013B223 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2AF684522D9D81BE0013B223 /* Preview Assets.xcassets */; };
+		2AF684622D9D81BE0013B223 /* FluiTHApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AF684562D9D81BE0013B223 /* FluiTHApp.swift */; };
+		2AF684632D9D81BE0013B223 /* Login.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AF684552D9D81BE0013B223 /* Login.swift */; };
+		2AF684642D9D81BE0013B223 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AF684572D9D81BE0013B223 /* HomeView.swift */; };
+		2AF6846A2D9D88320013B223 /* SplashView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AF684692D9D88320013B223 /* SplashView.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		2A4ED04B2DA403F80003D7A1 /* FluiTH.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FluiTH.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		2A4ED08A2DA459D40003D7A1 /* AprovedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AprovedView.swift; sourceTree = "<group>"; };
+		2A4ED08C2DA45A030003D7A1 /* PendientView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PendientView.swift; sourceTree = "<group>"; };
+		2AF684512D9D81BE0013B223 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		2AF684522D9D81BE0013B223 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		2AF684552D9D81BE0013B223 /* Login.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Login.swift; sourceTree = "<group>"; };
+		2AF684562D9D81BE0013B223 /* FluiTHApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FluiTHApp.swift; sourceTree = "<group>"; };
+		2AF684572D9D81BE0013B223 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		2AF684692D9D88320013B223 /* SplashView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashView.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFileSystemSynchronizedRootGroup section */
+		2A4ED07B2DA438A00003D7A1 /* Components */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = Components;
+			sourceTree = "<group>";
+		};
+		2A4ED0902DA469480003D7A1 /* API */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = API;
+			sourceTree = "<group>";
+		};
+		2AF6847B2D9DD6120013B223 /* OptionTabBar */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = OptionTabBar;
+			sourceTree = "<group>";
+		};
+		2AF6847E2D9F165A0013B223 /* OptionHamburger */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = OptionHamburger;
+			sourceTree = "<group>";
+		};
+		2AF684852DA400EB0013B223 /* OptionBtnPlus */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = OptionBtnPlus;
+			sourceTree = "<group>";
+		};
+/* End PBXFileSystemSynchronizedRootGroup section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		2AF67E012D9C2DD90013B223 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		2AF67DFB2D9C2DD90013B223 = {
+			isa = PBXGroup;
+			children = (
+				2AF684592D9D81BE0013B223 /* FluiTH */,
+				2A4ED04B2DA403F80003D7A1 /* FluiTH.app */,
+			);
+			sourceTree = "<group>";
+		};
+		2AF684532D9D81BE0013B223 /* AssetsContent */ = {
+			isa = PBXGroup;
+			children = (
+				2AF684512D9D81BE0013B223 /* Assets.xcassets */,
+				2AF684522D9D81BE0013B223 /* Preview Assets.xcassets */,
+			);
+			path = AssetsContent;
+			sourceTree = "<group>";
+		};
+		2AF684582D9D81BE0013B223 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				2AF684552D9D81BE0013B223 /* Login.swift */,
+				2AF684562D9D81BE0013B223 /* FluiTHApp.swift */,
+				2AF684572D9D81BE0013B223 /* HomeView.swift */,
+				2AF684692D9D88320013B223 /* SplashView.swift */,
+				2A4ED08A2DA459D40003D7A1 /* AprovedView.swift */,
+				2A4ED08C2DA45A030003D7A1 /* PendientView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		2AF684592D9D81BE0013B223 /* FluiTH */ = {
+			isa = PBXGroup;
+			children = (
+				2A4ED0902DA469480003D7A1 /* API */,
+				2A4ED07B2DA438A00003D7A1 /* Components */,
+				2AF684852DA400EB0013B223 /* OptionBtnPlus */,
+				2AF6847E2D9F165A0013B223 /* OptionHamburger */,
+				2AF6847B2D9DD6120013B223 /* OptionTabBar */,
+				2AF684532D9D81BE0013B223 /* AssetsContent */,
+				2AF684582D9D81BE0013B223 /* Views */,
+			);
+			path = FluiTH;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		2AF67E032D9C2DD90013B223 /* FluiTH */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2AF67E122D9C2DDA0013B223 /* Build configuration list for PBXNativeTarget "FluiTH" */;
+			buildPhases = (
+				2AF67E002D9C2DD90013B223 /* Sources */,
+				2AF67E012D9C2DD90013B223 /* Frameworks */,
+				2AF67E022D9C2DD90013B223 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			fileSystemSynchronizedGroups = (
+				2A4ED07B2DA438A00003D7A1 /* Components */,
+				2A4ED0902DA469480003D7A1 /* API */,
+				2AF6847B2D9DD6120013B223 /* OptionTabBar */,
+				2AF6847E2D9F165A0013B223 /* OptionHamburger */,
+				2AF684852DA400EB0013B223 /* OptionBtnPlus */,
+			);
+			name = FluiTH;
+			packageProductDependencies = (
+			);
+			productName = FluiTH;
+			productReference = 2A4ED04B2DA403F80003D7A1 /* FluiTH.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		2AF67DFC2D9C2DD90013B223 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1620;
+				LastUpgradeCheck = 1620;
+				TargetAttributes = {
+					2AF67E032D9C2DD90013B223 = {
+						CreatedOnToolsVersion = 16.2;
+					};
+				};
+			};
+			buildConfigurationList = 2AF67DFF2D9C2DD90013B223 /* Build configuration list for PBXProject "FluiTH" */;
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 2AF67DFB2D9C2DD90013B223;
+			minimizedProjectReferenceProxies = 1;
+			preferredProjectObjectVersion = 77;
+			productRefGroup = 2AF67DFB2D9C2DD90013B223;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				2AF67E032D9C2DD90013B223 /* FluiTH */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		2AF67E022D9C2DD90013B223 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2AF6845F2D9D81BE0013B223 /* Assets.xcassets in Resources */,
+				2AF684612D9D81BE0013B223 /* Preview Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		2AF67E002D9C2DD90013B223 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2AF684622D9D81BE0013B223 /* FluiTHApp.swift in Sources */,
+				2A4ED08D2DA45A030003D7A1 /* PendientView.swift in Sources */,
+				2AF684632D9D81BE0013B223 /* Login.swift in Sources */,
+				2AF6846A2D9D88320013B223 /* SplashView.swift in Sources */,
+				2AF684642D9D81BE0013B223 /* HomeView.swift in Sources */,
+				2A4ED08B2DA459D40003D7A1 /* AprovedView.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		2AF67E102D9C2DDA0013B223 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.2;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		2AF67E112D9C2DDA0013B223 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.2;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		2AF67E132D9C2DDA0013B223 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"FluiTH/AssetsContent\"";
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = Roshka.FluiTH;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		2AF67E142D9C2DDA0013B223 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"FluiTH/AssetsContent\"";
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = Roshka.FluiTH;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		2AF67DFF2D9C2DD90013B223 /* Build configuration list for PBXProject "FluiTH" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2AF67E102D9C2DDA0013B223 /* Debug */,
+				2AF67E112D9C2DDA0013B223 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2AF67E122D9C2DDA0013B223 /* Build configuration list for PBXNativeTarget "FluiTH" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2AF67E132D9C2DDA0013B223 /* Debug */,
+				2AF67E142D9C2DDA0013B223 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 2AF67DFC2D9C2DD90013B223 /* Project object */;
+}
