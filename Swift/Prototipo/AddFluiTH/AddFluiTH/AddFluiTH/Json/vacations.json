@@ -1,0 +1,212 @@
+[
+    {
+        "nombre": "Ana",
+        "apellido": "Martínez",
+        "fechaInicio": "01 Ene",
+        "fechaFin": "10 Ene"
+    },
+    {
+        "nombre": "Carlos",
+        "apellido": "Pérez",
+        "fechaInicio": "15 Ene",
+        "fechaFin": "25 Ene"
+    },
+    {
+        "nombre": "Luis",
+        "apellido": "Gómez",
+        "fechaInicio": "01 Feb",
+        "fechaFin": "10 Feb"
+    },
+    {
+        "nombre": "Marta",
+        "apellido": "Sánchez",
+        "fechaInicio": "05 Feb",
+        "fechaFin": "15 Feb"
+    },
+    {
+        "nombre": "Pedro",
+        "apellido": "Ramírez",
+        "fechaInicio": "12 Feb",
+        "fechaFin": "22 Feb"
+    },
+    {
+        "nombre": "Laura",
+        "apellido": "Fernández",
+        "fechaInicio": "18 Feb",
+        "fechaFin": "28 Feb"
+    },
+    {
+        "nombre": "José",
+        "apellido": "Lopez",
+        "fechaInicio": "01 Mar",
+        "fechaFin": "10 Mar"
+    },
+    {
+        "nombre": "Isabel",
+        "apellido": "Torres",
+        "fechaInicio": "03 Mar",
+        "fechaFin": "13 Mar"
+    },
+    {
+        "nombre": "Javier",
+        "apellido": "Gutiérrez",
+        "fechaInicio": "10 Mar",
+        "fechaFin": "20 Mar"
+    },
+    {
+        "nombre": "Ana",
+        "apellido": "Vázquez",
+        "fechaInicio": "14 Mar",
+        "fechaFin": "24 Mar"
+    },
+    {
+        "nombre": "Francisco",
+        "apellido": "Hernández",
+        "fechaInicio": "20 Mar",
+        "fechaFin": "30 Mar"
+    },
+    {
+        "nombre": "Carmen",
+        "apellido": "Ramírez",
+        "fechaInicio": "01 Abr",
+        "fechaFin": "10 Abr"
+    },
+    {
+        "nombre": "David",
+        "apellido": "González",
+        "fechaInicio": "02 Abr",
+        "fechaFin": "12 Abr"
+    },
+    {
+        "nombre": "Eva",
+        "apellido": "Mora",
+        "fechaInicio": "06 Abr",
+        "fechaFin": "16 Abr"
+    },
+    {
+        "nombre": "Andrés",
+        "apellido": "Cordero",
+        "fechaInicio": "10 Abr",
+        "fechaFin": "20 Abr"
+    },
+    {
+        "nombre": "Raquel",
+        "apellido": "Serrano",
+        "fechaInicio": "12 Abr",
+        "fechaFin": "22 Abr"
+    },
+    {
+        "nombre": "Manuel",
+        "apellido": "García",
+        "fechaInicio": "14 Abr",
+        "fechaFin": "24 Abr"
+    },
+    {
+        "nombre": "Patricia",
+        "apellido": "López",
+        "fechaInicio": "18 Abr",
+        "fechaFin": "28 Abr"
+    },
+    {
+        "nombre": "Ricardo",
+        "apellido": "Martín",
+        "fechaInicio": "22 Abr",
+        "fechaFin": "02 May"
+    },
+    {
+        "nombre": "María",
+        "apellido": "Ruiz",
+        "fechaInicio": "25 Abr",
+        "fechaFin": "05 May"
+    },
+    {
+        "nombre": "Antonio",
+        "apellido": "Alonso",
+        "fechaInicio": "01 May",
+        "fechaFin": "10 May"
+    },
+    {
+        "nombre": "Lucía",
+        "apellido": "González",
+        "fechaInicio": "02 May",
+        "fechaFin": "12 May"
+    },
+    {
+        "nombre": "Tomás",
+        "apellido": "Hernández",
+        "fechaInicio": "08 May",
+        "fechaFin": "18 May"
+    },
+    {
+        "nombre": "Elena",
+        "apellido": "Méndez",
+        "fechaInicio": "10 May",
+        "fechaFin": "20 May"
+    },
+    {
+        "nombre": "Fernando",
+        "apellido": "Vega",
+        "fechaInicio": "15 May",
+        "fechaFin": "25 May"
+    },
+    {
+        "nombre": "José Luis",
+        "apellido": "Molina",
+        "fechaInicio": "20 May",
+        "fechaFin": "30 May"
+    },
+    {
+        "nombre": "Sofía",
+        "apellido": "Pérez",
+        "fechaInicio": "25 May",
+        "fechaFin": "04 Jun"
+    },
+    {
+        "nombre": "Álvaro",
+        "apellido": "Suárez",
+        "fechaInicio": "30 May",
+        "fechaFin": "09 Jun"
+    },
+    {
+        "nombre": "Victoria",
+        "apellido": "López",
+        "fechaInicio": "01 Jun",
+        "fechaFin": "11 Jun"
+    },
+    {
+        "nombre": "Santiago",
+        "apellido": "Jiménez",
+        "fechaInicio": "05 Jun",
+        "fechaFin": "15 Jun"
+    },
+    {
+        "nombre": "Ana Isabel",
+        "apellido": "Torres",
+        "fechaInicio": "10 Jun",
+        "fechaFin": "20 Jun"
+    },
+    {
+        "nombre": "Felipe",
+        "apellido": "Castaño",
+        "fechaInicio": "12 Jun",
+        "fechaFin": "22 Jun"
+    },
+    {
+        "nombre": "Julia",
+        "apellido": "Castro",
+        "fechaInicio": "15 Jun",
+        "fechaFin": "25 Jun"
+    },
+    {
+        "nombre": "Pedro Antonio",
+        "apellido": "Gómez",
+        "fechaInicio": "18 Jun",
+        "fechaFin": "28 Jun"
+    },
+    {
+        "nombre": "Rosa",
+        "apellido": "Salazar",
+        "fechaInicio": "20 Jun",
+        "fechaFin": "30 Jun"
+    }
+]
