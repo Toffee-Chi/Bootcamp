@@ -43,6 +43,23 @@
                 android:textStyle="bold"
                 tools:text="hell naaaaah" />
 
+            <TextView
+                android:id="@+id/tvSuperheroRealN"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:textColor="@color/black"
+                android:textStyle="italic"
+                tools:text="hell naaaaah" />
+
+            <TextView
+                android:id="@+id/tvPublisher"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:textSize="11sp"
+                tools:text="hell naaaaah" />
+
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="150dp"
@@ -101,7 +118,7 @@
 
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="150dp"
+                android:layout_height="wrap_content"
                 android:layout_marginTop="24dp"
                 android:gravity="bottom"
                 android:orientation="horizontal">

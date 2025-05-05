@@ -2,6 +2,8 @@ package com.example.xmlcodebasic.superheroapp
 
 import android.os.Bundle
 import android.util.Log
+import android.util.TypedValue
+import android.view.View
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
@@ -15,6 +17,7 @@ import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
+import kotlin.math.roundToInt
 
 class DetailSuperheroActivity : AppCompatActivity() {
     companion object {
@@ -54,12 +57,27 @@ class DetailSuperheroActivity : AppCompatActivity() {
         Picasso.get().load(superhero.image.url).into(binding.ivSuperhero)
         binding.tvSuperheroN.text = superhero.name
         prepareStats(superhero.powerstats)
+        binding.tvSuperheroRealN.text = superhero.biography.fullName
+        binding.tvPublisher.text = superhero.biography.publisher
     }
 
-    private fun prepareStats(powestats: PowerStatsResponse) {
-        TODO("Not yet implemented")
-    }
+    private fun prepareStats(powerstats: PowerStatsResponse) {
+        updateHeight(binding.vCombat, powerstats.combat)
+        updateHeight(binding.vDurability, powerstats.durability)
+        updateHeight(binding.vSpeed, powerstats.speed)
+        updateHeight(binding.vStrength, powerstats.strength)
+        updateHeight(binding.vIntelligence, powerstats.intelligence)
+        updateHeight(binding.vPower, powerstats.power)
 
+    }
+    private fun updateHeight(view: View, stat:String){
+        val params = view.layoutParams
+        params.height = pxpToDp(stat.toFloat())
+        view.layoutParams = params
+    }
+    private fun pxpToDp(px:Float): Int{
+    return TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_DIP, px, resources.displayMetrics).roundToInt()
+    }
     private fun getRetrofit(): Retrofit {
         return Retrofit
             .Builder()

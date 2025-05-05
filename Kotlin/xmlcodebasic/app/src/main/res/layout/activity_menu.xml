@@ -6,6 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
+    android:gravity="center"
     android:layout_marginHorizontal="16dp"
     tools:context=".MenuActivity">
 
@@ -26,4 +27,15 @@
         android:layout_height="wrap_content"
         android:text="TODO APP" />
 
+    <Button
+        android:id="@+id/btnSuperhero"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Superhero" />
+
+    <Button
+        android:id="@+id/btnSettings"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Settings" />
 </LinearLayout>

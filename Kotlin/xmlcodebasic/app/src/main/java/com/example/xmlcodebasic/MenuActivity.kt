@@ -9,7 +9,10 @@ import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 import com.example.xmlcodebasic.firstapp.FirstAppActivity
 import com.example.xmlcodebasic.imccalculator.ImcCalculatorActivity
+import com.example.xmlcodebasic.settings.SettingActivity
+import com.example.xmlcodebasic.superheroapp.SuperHeroListActivity
 import com.example.xmlcodebasic.todoapp.TodoActivity
+import okhttp3.internal.http2.Settings
 
 class MenuActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -19,10 +22,16 @@ class MenuActivity : AppCompatActivity() {
         val btnSaludApp = findViewById<Button>(R.id.btnSaludApp)
         val btnImcApp = findViewById<Button>(R.id.btnIMCAPP)
         val btnTODO = findViewById<Button>(R.id.btnTODO)
+        val btnSuperhero = findViewById<Button>(R.id.btnSuperhero)
+        val btnSettings = findViewById<Button>(R.id.btnSettings)
+
 
         btnSaludApp.setOnClickListener { navigateToSaludApp() }
         btnImcApp.setOnClickListener { navigateToImcApp() }
         btnTODO.setOnClickListener { navigateToTodoApp() }
+        btnSuperhero.setOnClickListener { navigateToSuperheroApp() }
+        btnSettings.setOnClickListener { navigateToSettings() }
+
 
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main)) { v, insets ->
             val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
@@ -42,6 +51,14 @@ class MenuActivity : AppCompatActivity() {
     }
    private fun navigateToSaludApp(){
         val intent= Intent(this, FirstAppActivity::class.java)
+        startActivity(intent)
+    }
+    private fun navigateToSuperheroApp(){
+        val intent= Intent(this, SuperHeroListActivity::class.java)
+        startActivity(intent)
+    }
+    private fun navigateToSettings(){
+        val intent= Intent(this, SettingActivity::class.java)
         startActivity(intent)
     }
 }

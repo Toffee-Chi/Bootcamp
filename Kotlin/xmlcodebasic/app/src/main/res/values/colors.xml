@@ -35,7 +35,6 @@
 
     <!--    SuperheroApp-->
     <color name="superhero_item_name">#8B673AB7</color>
-
     <color name="superhero_stat_intelligence">#00ff00</color>
     <color name="superhero_stat_strength">#FF0000</color>
     <color name="superhero_stat_speed">#E88B00</color>
